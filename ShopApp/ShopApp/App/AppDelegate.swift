@@ -11,13 +11,72 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    let requestFactory = RequestFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        tryLogin()
+        sleep(2)
+        tryLogout()
+        sleep(2)
+        tryChangeData()
+        sleep(2)
+        trySignUp()
+        
         return true
     }
 
+    // MARK: Actions
+    
+    private func tryLogin(){
+        let auth = requestFactory.makeAuthRequestFatory()
+        auth.login(userName: "Somebody", password: "mypassword") { response in
+            switch response.result {
+            case .success(let login):
+                print(login)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryLogout(){
+        let logout = requestFactory.makeLogoutRequestFatory()
+        logout.logout(idUser: 123) { response in
+            switch response.result {
+            case .success(let logout):
+                print(logout)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryChangeData(){
+        let change = requestFactory.makeProfileChangeRequestFatory()
+        change.profileChange(idUser: 123, userName: "Kirill", password: "geekbrains", email: "corp@gmail.com", gender: "m", creditCard: "1111-2222-3333-4444", bio: "Hi everyone!!!") { response in
+            switch response.result {
+            case .success(let profile):
+                print(profile)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func trySignUp(){
+        let signUp = requestFactory.makeSignUpRequestFactory()
+        signUp.signUp(idUser: 222, userName: "Kirill", password: "newPass20!", email: "corp2@mail.ru", gender: "m", creditCard: "4444-4444-4444-4444", bio: "Here I am, Roch you like a hurricane") { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

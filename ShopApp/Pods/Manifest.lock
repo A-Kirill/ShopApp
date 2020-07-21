@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.2.2)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 4d94f74fd0d98c8aace5a1e3c31cac3dfc739604
+
+COCOAPODS: 1.9.3
