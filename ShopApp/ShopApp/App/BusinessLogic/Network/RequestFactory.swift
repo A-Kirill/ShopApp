@@ -39,5 +39,10 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return ProfileChange(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeSignUpRequestFactory() -> SignUpRequestFactory {
+        let errorParser = makeErrorParser()
+        return SignUp(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }
 

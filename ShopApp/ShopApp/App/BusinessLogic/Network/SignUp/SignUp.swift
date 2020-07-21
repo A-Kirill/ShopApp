@@ -1,5 +1,5 @@
 //
-//  ProfileChange.swift
+//  SignUp.swift
 //  ShopApp
 //
 //  Created by Kirill Anisimov on 21.07.2020.
@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class ProfileChange: AbstractRequestFactory {
+class SignUp: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -25,18 +25,18 @@ class ProfileChange: AbstractRequestFactory {
     }
 }
 
-extension ProfileChange: ProfileChangeRequestFactory {
-    func profileChange(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<ProfileChangeResult>) -> Void) {
-        let requestModel = ProfileChange(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+extension SignUp: SignUpRequestFactory {
+    func signUp(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<SignUpResult>) -> Void) {
+        let requestModel = Registration(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension ProfileChange {
-    struct ProfileChange: RequestRouter {
+extension SignUp {
+    struct Registration: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
+        let path: String = "registerUser.json"
         
         let idUser: Int
         let userName: String
@@ -54,7 +54,7 @@ extension ProfileChange {
                 "gender": gender,
                 "credit_card": creditCard,
                 "bio": bio
-            ]            
+            ]
         }
     }
 }
