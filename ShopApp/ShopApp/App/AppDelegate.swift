@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    
+    // MARK: Actions
     
     private func tryLogin(){
         let auth = requestFactory.makeAuthRequestFatory()
@@ -43,6 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch response.result {
             case .success(let logout):
                 print(logout)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryChangeData(){
+        let change = requestFactory.makeProfileChangeRequestFatory()
+        change.profileChange(idUser: 123, userName: "Kirill", password: "geekbrains", email: "corp@gmail.com", gender: "m", creditCard: "1111-2222-3333-4444", bio: "Hi everyone!!!") { response in
+            switch response.result {
+            case .success(let profile):
+                print(profile)
             case .failure(let error):
                 print(error.localizedDescription)
             }

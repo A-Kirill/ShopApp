@@ -34,5 +34,10 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return Logout(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeProfileChangeRequestFatory() -> ProfileChangeRequestFactory {
+        let errorParser = makeErrorParser()
+        return ProfileChange(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }
 
