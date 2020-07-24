@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236BA61624CAE4A400E8C91B /* CatalogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61524CAE4A400E8C91B /* CatalogData.swift */; };
+		236BA61824CAE51A00E8C91B /* CatalogDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61724CAE51A00E8C91B /* CatalogDataRequestFactory.swift */; };
+		236BA61A24CAE58300E8C91B /* CatalogDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61924CAE58300E8C91B /* CatalogDataResult.swift */; };
 		239818EF24C1D085005130E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239818EE24C1D085005130E3 /* AppDelegate.swift */; };
 		239818F124C1D085005130E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239818F024C1D085005130E3 /* SceneDelegate.swift */; };
 		239818F824C1D085005130E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239818F724C1D085005130E3 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 /* Begin PBXFileReference section */
 		03F135D30D82EE2218CCF031 /* Pods_ShopAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		050EA76BA33DB0EFBFEFE40A /* Pods-ShopAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShopAppTests/Pods-ShopAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		236BA61524CAE4A400E8C91B /* CatalogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogData.swift; sourceTree = "<group>"; };
+		236BA61724CAE51A00E8C91B /* CatalogDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataRequestFactory.swift; sourceTree = "<group>"; };
+		236BA61924CAE58300E8C91B /* CatalogDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataResult.swift; sourceTree = "<group>"; };
 		239818EB24C1D085005130E3 /* ShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239818EE24C1D085005130E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239818F024C1D085005130E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +131,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236BA61424CAE47300E8C91B /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				236BA61524CAE4A400E8C91B /* CatalogData.swift */,
+				236BA61924CAE58300E8C91B /* CatalogDataResult.swift */,
+				236BA61724CAE51A00E8C91B /* CatalogDataRequestFactory.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		239818E224C1D084005130E3 = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +275,7 @@
 		23BD26F824C5AA7400671411 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				236BA61424CAE47300E8C91B /* Catalog */,
 				23BD271424C7177F00671411 /* SignUp */,
 				23BD270524C6DECC00671411 /* Auth */,
 				23BD270624C6DEDD00671411 /* Logout */,
@@ -570,10 +587,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				23BD26FE24C5AB9600671411 /* RequestFactory.swift in Sources */,
+				236BA61624CAE4A400E8C91B /* CatalogData.swift in Sources */,
 				23BD26ED24C59CD700671411 /* AbstractErrorParser.swift in Sources */,
 				23BD271324C6F48F00671411 /* ProfileChangeRequestFactory.swift in Sources */,
 				23BD270824C6DF5400671411 /* LogoutResult.swift in Sources */,
 				23BD26F524C5AA0E00671411 /* LoginResult.swift in Sources */,
+				236BA61A24CAE58300E8C91B /* CatalogDataResult.swift in Sources */,
 				23BD26F124C59E5500671411 /* DataRequest.swift in Sources */,
 				23BD271824C717D700671411 /* SignUpResult.swift in Sources */,
 				23BD270F24C6F43E00671411 /* ProfileChange.swift in Sources */,
@@ -587,6 +606,7 @@
 				23BD270024C5CD9F00671411 /* CustomDecodableSerializer.swift in Sources */,
 				23BD270C24C6E13900671411 /* LogoutRequestFactory.swift in Sources */,
 				23BD271624C717C200671411 /* SignUp.swift in Sources */,
+				236BA61824CAE51A00E8C91B /* CatalogDataRequestFactory.swift in Sources */,
 				23BD26EF24C59DDC00671411 /* ErrorParser.swift in Sources */,
 				23BD270A24C6DFAD00671411 /* Logout.swift in Sources */,
 				23BD271A24C717F200671411 /* SignUpRequestFactory.swift in Sources */,

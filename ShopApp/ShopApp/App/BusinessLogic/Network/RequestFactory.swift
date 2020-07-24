@@ -44,5 +44,10 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return SignUp(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeCatalogDataRequestFatory() -> CatalogDataRequestFactory {
+        let errorParser = makeErrorParser()
+        return CatalogData(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }
 
