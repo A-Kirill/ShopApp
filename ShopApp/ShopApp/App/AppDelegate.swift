@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tryChangeData()
         sleep(2)
         trySignUp()
+        sleep(2)
+        tryRequestCatalogData()
+        sleep(2)
+        tryRequestProductData()
         
         return true
     }
@@ -68,6 +72,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func trySignUp(){
         let signUp = requestFactory.makeSignUpRequestFactory()
         signUp.signUp(idUser: 222, userName: "Kirill", password: "newPass20!", email: "corp2@mail.ru", gender: "m", creditCard: "4444-4444-4444-4444", bio: "Here I am, Roch you like a hurricane") { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryRequestCatalogData(){
+        let catalogData = requestFactory.makeCatalogDataRequestFatory()
+        catalogData.getCatalogData(pageNumber: 1, idCategory: 1) { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryRequestProductData(){
+        let productData = requestFactory.makeProductDataRequestFatory()
+        productData.getProductData(id: 123) { response in
             switch response.result {
             case .success(let userMessage):
                 print(userMessage)
