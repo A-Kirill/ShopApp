@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23105D4F24D0A7CB00674391 /* routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23105D4E24D0A7CB00674391 /* routes.swift */; };
 		236BA61624CAE4A400E8C91B /* CatalogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61524CAE4A400E8C91B /* CatalogData.swift */; };
 		236BA61824CAE51A00E8C91B /* CatalogDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61724CAE51A00E8C91B /* CatalogDataRequestFactory.swift */; };
 		236BA61A24CAE58300E8C91B /* CatalogDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61924CAE58300E8C91B /* CatalogDataResult.swift */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		03F135D30D82EE2218CCF031 /* Pods_ShopAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		050EA76BA33DB0EFBFEFE40A /* Pods-ShopAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShopAppTests/Pods-ShopAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		23105D4E24D0A7CB00674391 /* routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routes.swift; sourceTree = "<group>"; };
 		236BA61524CAE4A400E8C91B /* CatalogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogData.swift; sourceTree = "<group>"; };
 		236BA61724CAE51A00E8C91B /* CatalogDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataRequestFactory.swift; sourceTree = "<group>"; };
 		236BA61924CAE58300E8C91B /* CatalogDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataResult.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				23BD270624C6DEDD00671411 /* Logout */,
 				23BD270D24C6F35300671411 /* ProfileChange */,
 				23BD26FD24C5AB9600671411 /* RequestFactory.swift */,
+				23105D4E24D0A7CB00674391 /* routes.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				23BD26F524C5AA0E00671411 /* LoginResult.swift in Sources */,
 				236BA61A24CAE58300E8C91B /* CatalogDataResult.swift in Sources */,
 				23BD26F124C59E5500671411 /* DataRequest.swift in Sources */,
+				23105D4F24D0A7CB00674391 /* routes.swift in Sources */,
 				23BD271824C717D700671411 /* SignUpResult.swift in Sources */,
 				23BD270F24C6F43E00671411 /* ProfileChange.swift in Sources */,
 				23BD26F324C5A75400671411 /* RequestRouter.swift in Sources */,
