@@ -37,5 +37,20 @@ func routes(_ app: Application) throws {
         let name = req.parameters.get("name")!
         return "Hello, \(name)!"
     }
+ 
+ //AddReview
+ app.get("addReview") { req -> String in
+ return "{ \"result\": 1, \"userMessage\": \"Ваш отзыв был передан на модерацию\" }"
+ }
+ 
+ //RemoveReview
+ app.get("removeReview") { req -> String in
+ return "{ \"result\": 1 }"
+ }
+ 
+ //ReviewList
+ app.get("getReviewsList") { req -> String in
+ return "[{\"id_product\": 123, \"idUser\": 222, \"text\": \"Хороший ноут.\"},{\"id_product\": 123, \"idUser\": 333, \"text\": \"Материалы китайского ноута.\"},{\"id_product\": 123, \"idUser\": 444, \"text\": \"Для интернет серфинга.\"}]"
+ }
 }
 */

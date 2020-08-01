@@ -26,7 +26,7 @@ class ReviewsList: AbstractRequestFactory {
 }
 
 extension ReviewsList: ReviewsListRequestFactory {
-    func getReviewsList(idProduct: Int, completionHandler: @escaping (AFDataResponse<ReviewsListResult>) -> Void) {
+    func getReviewsList(idProduct: Int, completionHandler: @escaping (AFDataResponse<[Review]>) -> Void) {
         let requestModel = ReviewsList(baseUrl: baseUrl, idProduct: idProduct)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

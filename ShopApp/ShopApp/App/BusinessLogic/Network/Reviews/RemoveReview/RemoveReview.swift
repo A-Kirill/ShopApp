@@ -26,7 +26,7 @@ class RemoveReview: AbstractRequestFactory {
 }
 
 extension RemoveReview: RemoveReviewRequestFactory {
-    func removeReview(id: Int, completionHandler: @escaping (AFDataResponse<AddReviewResult>) -> Void) {
+    func removeReview(id: Int, completionHandler: @escaping (AFDataResponse<RemoveReviewResult>) -> Void) {
         let requestModel = RemoveReview(baseUrl: baseUrl, idReview: id)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
