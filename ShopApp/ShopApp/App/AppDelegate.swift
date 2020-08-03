@@ -17,16 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         tryLogin()
+//        sleep(2)
+//        tryLogout()
+//        sleep(2)
+//        tryChangeData()
+//        sleep(2)
+//        trySignUp()
+//        sleep(2)
+//        tryRequestCatalogData()
+//        sleep(2)
+//        tryRequestProductData()
         sleep(2)
-        tryLogout()
+        tryAddReview()
         sleep(2)
-        tryChangeData()
+        tryRemoveReview()
         sleep(2)
-        trySignUp()
-        sleep(2)
-        tryRequestCatalogData()
-        sleep(2)
-        tryRequestProductData()
+        tryGetReviews()
         
         return true
     }
@@ -96,6 +102,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func tryRequestProductData(){
         let productData = requestFactory.makeProductDataRequestFatory()
         productData.getProductData(id: 123) { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryAddReview(){
+        let review = requestFactory.makeAddReviewRequestFatory()
+        review.addReview(idUser: 222, idProduct: 123, text: "Amazing device...") { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryRemoveReview(){
+        let review = requestFactory.makeRemoveReviewRequestFatory()
+        review.removeReview(id: 222) { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryGetReviews(){
+        let reviews = requestFactory.makeReviewsListRequestFatory()
+        reviews.getReviewsList(idProduct: 123) { response in
             switch response.result {
             case .success(let userMessage):
                 print(userMessage)
