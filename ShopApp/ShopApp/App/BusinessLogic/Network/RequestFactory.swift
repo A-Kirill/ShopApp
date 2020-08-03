@@ -75,5 +75,9 @@ class RequestFactory {
         return AddToBasket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
+    func makeDeleteFromBasketRequestFatory() -> DeleteFromBasketRequestFactory {
+        let errorParser = makeErrorParser()
+        return DeleteFromBasket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }
 
