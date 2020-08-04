@@ -52,5 +52,20 @@ func routes(_ app: Application) throws {
  app.get("getReviewsList") { req -> String in
  return "[{\"id_product\": 123, \"idUser\": 222, \"text\": \"Хороший ноут.\"},{\"id_product\": 123, \"idUser\": 333, \"text\": \"Материалы китайского ноута.\"},{\"id_product\": 123, \"idUser\": 444, \"text\": \"Для интернет серфинга.\"}]"
  }
+ 
+ //AddToBasket
+ app.get("addToBasket") { req -> String in
+     return "{ \"result\": 1 }"
+ }
+ 
+ //DeleteFromBasket
+ app.get("deleteFromBasket") { req -> String in
+     return "{ \"result\": 1 }"
+ }
+ 
+ //Payment
+ app.get("payment") { req -> String in
+     return "{ \"result\": 1, \"userMessage\": \"Ваш заказ оплачен\" }"
+ }
 }
 */
