@@ -70,5 +70,19 @@ class RequestFactory {
         return RemoveReview(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
+    func makeAddToBasketRequestFatory() -> AddToBasketRequestFactory {
+        let errorParser = makeErrorParser()
+        return AddToBasket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeDeleteFromBasketRequestFatory() -> DeleteFromBasketRequestFactory {
+        let errorParser = makeErrorParser()
+        return DeleteFromBasket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makePaymentOrderRequestFatory() -> PaymentOrderRequestFactory {
+        let errorParser = makeErrorParser()
+        return PaymentOrder(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }
 

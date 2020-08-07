@@ -33,6 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tryRemoveReview()
         sleep(2)
         tryGetReviews()
+        sleep(2)
+        tryAddToBasket()
+        sleep(2)
+        tryDeleteFromBasket()
+        sleep(2)
+        tryPayment()
+        
         
         return true
     }
@@ -138,6 +145,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func tryGetReviews(){
         let reviews = requestFactory.makeReviewsListRequestFatory()
         reviews.getReviewsList(idProduct: 123) { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryAddToBasket(){
+        let adding = requestFactory.makeAddToBasketRequestFatory()
+        adding.addToBasket(idProduct: 123, quantity: 1) { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryDeleteFromBasket(){
+        let deleting = requestFactory.makeDeleteFromBasketRequestFatory()
+        deleting.deleteFromBasket(idProduct: 123) { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryPayment(){
+        let payment = requestFactory.makePaymentOrderRequestFatory()
+        payment.paymentOrder(idProduct: 123, creditCard: "4444-4444-4444-4444") { response in
             switch response.result {
             case .success(let userMessage):
                 print(userMessage)
