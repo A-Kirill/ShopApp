@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса на удаление ревью
 class RemoveReview: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -25,6 +26,7 @@ class RemoveReview: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода на удаление ревью
 extension RemoveReview: RemoveReviewRequestFactory {
     func removeReview(id: Int, completionHandler: @escaping (AFDataResponse<RemoveReviewResult>) -> Void) {
         let requestModel = RemoveReview(baseUrl: baseUrl, idReview: id)
@@ -32,6 +34,7 @@ extension RemoveReview: RemoveReviewRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension RemoveReview {
     struct RemoveReview: RequestRouter {
         let baseUrl: URL

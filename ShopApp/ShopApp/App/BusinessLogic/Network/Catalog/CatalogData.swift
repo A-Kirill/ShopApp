@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса каталога товаров
 class CatalogData: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -26,6 +27,7 @@ class CatalogData: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода запроса каталога товаров
 extension CatalogData: CatalogDataRequestFactory {
     func getCatalogData(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<[Product]>) -> Void) {
         let requestModel = CatalogData(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
@@ -33,6 +35,7 @@ extension CatalogData: CatalogDataRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension CatalogData {
     struct CatalogData: RequestRouter {
         let baseUrl: URL

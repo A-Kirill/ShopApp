@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса на разлогирование
 class Logout: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -26,6 +27,7 @@ class Logout: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода разлогирования
 extension Logout: LogoutRequestFactory {
     func logout(idUser: Int, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
         let requestModel = Logout(baseUrl: baseUrl, idUser: idUser)
@@ -33,6 +35,7 @@ extension Logout: LogoutRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension Logout {
     struct Logout: RequestRouter {
         let baseUrl: URL

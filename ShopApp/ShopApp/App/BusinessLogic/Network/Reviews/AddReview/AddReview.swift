@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса на добавление ревью
 class AddReview: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -25,6 +26,7 @@ class AddReview: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода доавбления ревью
 extension AddReview: AddReviewRequestFactory {
     func addReview(idUser: Int, idProduct: Int, text: String, completionHandler: @escaping (AFDataResponse<AddReviewResult>) -> Void) {
         let requestModel = AddReview(baseUrl: baseUrl, idUser: idUser, idProduct: idProduct, text: text)
@@ -32,6 +34,7 @@ extension AddReview: AddReviewRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension AddReview {
     struct AddReview: RequestRouter {
         let baseUrl: URL

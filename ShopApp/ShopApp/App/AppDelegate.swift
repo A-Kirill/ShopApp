@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        tryLogin()
+//        tryLogin()
 //        sleep(2)
 //        tryLogout()
 //        sleep(2)
@@ -27,18 +27,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        tryRequestCatalogData()
 //        sleep(2)
 //        tryRequestProductData()
-        sleep(2)
-        tryAddReview()
-        sleep(2)
-        tryRemoveReview()
-        sleep(2)
-        tryGetReviews()
-        sleep(2)
-        tryAddToBasket()
-        sleep(2)
-        tryDeleteFromBasket()
-        sleep(2)
-        tryPayment()
+//        sleep(2)
+//        tryAddReview()
+//        sleep(2)
+//        tryRemoveReview()
+//        sleep(2)
+//        tryGetReviews()
+//        sleep(2)
+//        tryAddToBasket()
+//        sleep(2)
+//        tryDeleteFromBasket()
+//        sleep(2)
+//        tryPayment()
         
         
         return true
