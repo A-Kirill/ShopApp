@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса регистрации
 class SignUp: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -26,6 +27,7 @@ class SignUp: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация запроса регистрации
 extension SignUp: SignUpRequestFactory {
     func signUp(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<SignUpResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
@@ -33,6 +35,7 @@ extension SignUp: SignUpRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension SignUp {
     struct Registration: RequestRouter {
         let baseUrl: URL

@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса на оплату товара
 class PaymentOrder: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -25,6 +26,7 @@ class PaymentOrder: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода оплаты товара
 extension PaymentOrder: PaymentOrderRequestFactory {
     func paymentOrder(idProduct: Int, creditCard: String, completionHandler: @escaping (AFDataResponse<PaymentOrderResult>) -> Void) {
         let requestModel = PaymentOrder(baseUrl: baseUrl, idProduct: idProduct, creditCard: creditCard)
@@ -32,6 +34,7 @@ extension PaymentOrder: PaymentOrderRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension PaymentOrder {
     struct PaymentOrder: RequestRouter {
         let baseUrl: URL

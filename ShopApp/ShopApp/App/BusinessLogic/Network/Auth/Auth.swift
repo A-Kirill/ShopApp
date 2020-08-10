@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса на авторизации
 class Auth: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -26,6 +27,7 @@ class Auth: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода авторизации
 extension Auth: AuthRequestFactory {
     func login(userName: String, password: String, completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
         let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
@@ -33,6 +35,7 @@ extension Auth: AuthRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension Auth {
     struct Login: RequestRouter {
         let baseUrl: URL

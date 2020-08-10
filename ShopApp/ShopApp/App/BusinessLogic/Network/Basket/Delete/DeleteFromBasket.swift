@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса на удаление товара из корзины
 class DeleteFromBasket: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -25,6 +26,7 @@ class DeleteFromBasket: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода на удаление товара из корзины
 extension DeleteFromBasket: DeleteFromBasketRequestFactory {
     func deleteFromBasket(idProduct: Int, completionHandler: @escaping (AFDataResponse<DeleteFromBasketResult>) -> Void) {
         let requestModel = DeleteFromBasket(baseUrl: baseUrl, idProduct: idProduct)
@@ -32,6 +34,7 @@ extension DeleteFromBasket: DeleteFromBasketRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension DeleteFromBasket {
     struct DeleteFromBasket: RequestRouter {
         let baseUrl: URL

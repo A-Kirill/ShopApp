@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса информации о товаре
 class ProductData: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -26,6 +27,7 @@ class ProductData: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода запроса информации о товаре
 extension ProductData: ProductDataRequestFactory {
     func getProductData(id: Int, completionHandler: @escaping (AFDataResponse<ProductDataResult>) -> Void) {
         let requestModel = ProductData(baseUrl: baseUrl, idProduct: id)
@@ -33,6 +35,7 @@ extension ProductData: ProductDataRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension ProductData {
     struct ProductData: RequestRouter {
         let baseUrl: URL

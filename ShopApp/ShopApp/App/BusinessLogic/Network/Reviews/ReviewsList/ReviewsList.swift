@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса списка отзывов
 class ReviewsList: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -25,6 +26,7 @@ class ReviewsList: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода списка отзывов
 extension ReviewsList: ReviewsListRequestFactory {
     func getReviewsList(idProduct: Int, completionHandler: @escaping (AFDataResponse<[Review]>) -> Void) {
         let requestModel = ReviewsList(baseUrl: baseUrl, idProduct: idProduct)
@@ -32,6 +34,7 @@ extension ReviewsList: ReviewsListRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension ReviewsList {
     struct ReviewsList: RequestRouter {
         let baseUrl: URL

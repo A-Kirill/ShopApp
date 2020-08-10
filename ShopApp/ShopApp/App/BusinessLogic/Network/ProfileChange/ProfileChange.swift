@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса на изменение данных
 class ProfileChange: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -26,6 +27,7 @@ class ProfileChange: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода изменения данных
 extension ProfileChange: ProfileChangeRequestFactory {
     func profileChange(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<ProfileChangeResult>) -> Void) {
         let requestModel = ProfileChange(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
@@ -33,6 +35,7 @@ extension ProfileChange: ProfileChangeRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension ProfileChange {
     struct ProfileChange: RequestRouter {
         let baseUrl: URL

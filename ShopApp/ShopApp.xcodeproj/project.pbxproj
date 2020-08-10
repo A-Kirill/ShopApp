@@ -15,6 +15,7 @@
 		236BA61F24CB036F00E8C91B /* ProductDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61E24CB036F00E8C91B /* ProductDataResult.swift */; };
 		236BA62124CB03A700E8C91B /* ProductDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA62024CB03A700E8C91B /* ProductDataRequestFactory.swift */; };
 		236BA62324CB221E00E8C91B /* AuthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA62224CB221E00E8C91B /* AuthTest.swift */; };
+		2373215F24DE962E009FF758 /* UserLKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373215E24DE962E009FF758 /* UserLKViewController.swift */; };
 		237F0D9324D88D24001DDC91 /* AddToBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237F0D9224D88D24001DDC91 /* AddToBasket.swift */; };
 		237F0D9524D88D32001DDC91 /* AddToBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237F0D9424D88D32001DDC91 /* AddToBasketResult.swift */; };
 		237F0D9724D88D4E001DDC91 /* AddToBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237F0D9624D88D4E001DDC91 /* AddToBasketRequestFactory.swift */; };
@@ -34,6 +35,9 @@
 		23A01D1C24D9DB3E008779AF /* PaymentOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A01D1B24D9DB3E008779AF /* PaymentOrder.swift */; };
 		23A01D1E24D9DB55008779AF /* PaymentOrderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A01D1D24D9DB55008779AF /* PaymentOrderResult.swift */; };
 		23A01D2024D9DB83008779AF /* PaymentOrderRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A01D1F24D9DB83008779AF /* PaymentOrderRequestFactory.swift */; };
+		23A01D5E24DDD074008779AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A01D5D24DDD074008779AF /* Main.storyboard */; };
+		23A01D6024DDD515008779AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A01D5F24DDD515008779AF /* LoginViewController.swift */; };
+		23A01D6224DDD9D3008779AF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A01D6124DDD9D3008779AF /* SignUpViewController.swift */; };
 		23B8F92424D43A36004D5840 /* ReviewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8F92324D43A36004D5840 /* ReviewsList.swift */; };
 		23B8F92624D43B07004D5840 /* ReviewsListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8F92524D43B07004D5840 /* ReviewsListResult.swift */; };
 		23B8F92824D43B15004D5840 /* ReviewsListRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8F92724D43B15004D5840 /* ReviewsListRequestFactory.swift */; };
@@ -95,6 +99,7 @@
 		236BA61E24CB036F00E8C91B /* ProductDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataResult.swift; sourceTree = "<group>"; };
 		236BA62024CB03A700E8C91B /* ProductDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataRequestFactory.swift; sourceTree = "<group>"; };
 		236BA62224CB221E00E8C91B /* AuthTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTest.swift; sourceTree = "<group>"; };
+		2373215E24DE962E009FF758 /* UserLKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLKViewController.swift; sourceTree = "<group>"; };
 		237F0D9224D88D24001DDC91 /* AddToBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasket.swift; sourceTree = "<group>"; };
 		237F0D9424D88D32001DDC91 /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketResult.swift; sourceTree = "<group>"; };
 		237F0D9624D88D4E001DDC91 /* AddToBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketRequestFactory.swift; sourceTree = "<group>"; };
@@ -120,6 +125,9 @@
 		23A01D1B24D9DB3E008779AF /* PaymentOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrder.swift; sourceTree = "<group>"; };
 		23A01D1D24D9DB55008779AF /* PaymentOrderResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderResult.swift; sourceTree = "<group>"; };
 		23A01D1F24D9DB83008779AF /* PaymentOrderRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderRequestFactory.swift; sourceTree = "<group>"; };
+		23A01D5D24DDD074008779AF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		23A01D5F24DDD515008779AF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		23A01D6124DDD9D3008779AF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		23B8F92324D43A36004D5840 /* ReviewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsList.swift; sourceTree = "<group>"; };
 		23B8F92524D43B07004D5840 /* ReviewsListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsListResult.swift; sourceTree = "<group>"; };
 		23B8F92724D43B15004D5840 /* ReviewsListRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsListRequestFactory.swift; sourceTree = "<group>"; };
@@ -203,6 +211,16 @@
 				236BA62024CB03A700E8C91B /* ProductDataRequestFactory.swift */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		2373216024DEAD93009FF758 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23A01D5F24DDD515008779AF /* LoginViewController.swift */,
+				23A01D6124DDD9D3008779AF /* SignUpViewController.swift */,
+				2373215E24DE962E009FF758 /* UserLKViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		237F0D8E24D88C58001DDC91 /* Basket */ = {
@@ -315,6 +333,8 @@
 		2398192024C1D486005130E3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2373216024DEAD93009FF758 /* Controllers */,
+				23A01D5D24DDD074008779AF /* Main.storyboard */,
 				239818F924C1D085005130E3 /* LaunchScreen.storyboard */,
 				239818F724C1D085005130E3 /* Assets.xcassets */,
 			);
@@ -610,6 +630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A01D5E24DDD074008779AF /* Main.storyboard in Resources */,
 				239818FB24C1D085005130E3 /* LaunchScreen.storyboard in Resources */,
 				239818F824C1D085005130E3 /* Assets.xcassets in Resources */,
 			);
@@ -777,9 +798,12 @@
 				237F0D9524D88D32001DDC91 /* AddToBasketResult.swift in Sources */,
 				23BD271624C717C200671411 /* SignUp.swift in Sources */,
 				23B8F93424D45B35004D5840 /* RemoveReviewResult.swift in Sources */,
+				2373215F24DE962E009FF758 /* UserLKViewController.swift in Sources */,
 				236BA61824CAE51A00E8C91B /* CatalogDataRequestFactory.swift in Sources */,
 				236BA61D24CB021400E8C91B /* ProductData.swift in Sources */,
+				23A01D6024DDD515008779AF /* LoginViewController.swift in Sources */,
 				23A01D1C24D9DB3E008779AF /* PaymentOrder.swift in Sources */,
+				23A01D6224DDD9D3008779AF /* SignUpViewController.swift in Sources */,
 				23BD26EF24C59DDC00671411 /* ErrorParser.swift in Sources */,
 				23A01D2024D9DB83008779AF /* PaymentOrderRequestFactory.swift in Sources */,
 				23BD270A24C6DFAD00671411 /* Logout.swift in Sources */,

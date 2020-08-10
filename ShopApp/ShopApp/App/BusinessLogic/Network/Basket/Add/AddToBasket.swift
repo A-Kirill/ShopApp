@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// Класс запроса на добавление товара в корзину
 class AddToBasket: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
@@ -25,6 +26,7 @@ class AddToBasket: AbstractRequestFactory {
     }
 }
 
+// MARK: - реализация метода добавления товара в корзину
 extension AddToBasket: AddToBasketRequestFactory {
     func addToBasket(idProduct: Int, quantity: Int, completionHandler: @escaping (AFDataResponse<AddToBasketResult>) -> Void) {
         let requestModel = AddToBasket(baseUrl: baseUrl, idProduct: idProduct, quantity: quantity)
@@ -32,6 +34,7 @@ extension AddToBasket: AddToBasketRequestFactory {
     }
 }
 
+// MARK: - структура параметров запроса
 extension AddToBasket {
     struct AddToBasket: RequestRouter {
         let baseUrl: URL
