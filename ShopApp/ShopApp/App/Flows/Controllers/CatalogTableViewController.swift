@@ -9,7 +9,8 @@
 import UIKit
 
 class CatalogTableViewController: UITableViewController {
-    let requestFactory = RequestFactory()
+    
+    private var catalogRequest: CatalogDataRequestFactory!
     private var products: [Product] = []
 
     override func viewDidLoad() {
@@ -17,8 +18,13 @@ class CatalogTableViewController: UITableViewController {
         self.navigationItem.title = "Catalog"
         tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "productIdentifier")
         
-        tryRequestCatalogData()
+        catalogRequest = RequestFactory().makeCatalogDataRequestFatory()
         setupRefreshControl()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateCatalogData()
     }
 
     // MARK: - Table view data source
@@ -44,9 +50,8 @@ class CatalogTableViewController: UITableViewController {
         return cell
     }
     
-    private func tryRequestCatalogData(){
-        let catalogData = requestFactory.makeCatalogDataRequestFatory()
-        catalogData.getCatalogData(pageNumber: 1, idCategory: 1) { response in
+    private func updateCatalogData(){
+        catalogRequest.getCatalogData(pageNumber: 1, idCategory: 1) { response in
             switch response.result {
             case .success(let value):
                 print(value)
@@ -70,7 +75,7 @@ class CatalogTableViewController: UITableViewController {
 
     @objc func refreshNews() {
         self.refreshControl?.beginRefreshing()
-        tryRequestCatalogData()
+        updateCatalogData()
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
