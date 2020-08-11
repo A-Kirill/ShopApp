@@ -41,7 +41,9 @@ class LoginViewController: UIViewController {
     @IBAction func signupButton(_ sender: Any) {
     }
     
-
+    @IBAction func getCatalogPressed(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
