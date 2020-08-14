@@ -46,8 +46,20 @@ class CatalogTableViewController: UITableViewController {
         cell.productLabel.text = "\(product.name)"
         cell.priceLabel.text = "\(product.price) RUB"
         cell.idLabel.text = "ID - \(product.id)"
+        cell.productImage.image = UIImage(named: "no image")
         
         return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedProduct = products[indexPath.row]
+        
+        if let productController = storyboard?.instantiateViewController(identifier: "ProductViewControllerID") as? ProductViewController {
+            productController.navigationItem.title = "\(selectedProduct.name)"
+            productController.productId = selectedProduct.id
+            navigationController?.pushViewController(productController, animated: true)
+        }
     }
     
     private func updateCatalogData(){

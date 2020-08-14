@@ -30,6 +30,8 @@
 		238C67D724E1BA5000E02952 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67D624E1BA5000E02952 /* ProductTableViewCell.swift */; };
 		238C67D924E1BC3700E02952 /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67D824E1BC3700E02952 /* CatalogTableViewController.swift */; };
 		238C67DC24E3152800E02952 /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67DB24E3152800E02952 /* ActivityIndicatorPresenter.swift */; };
+		238C67DE24E7017700E02952 /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67DD24E7017700E02952 /* ReviewsTableViewController.swift */; };
+		238C67E024E7068700E02952 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67DF24E7068700E02952 /* ProductViewController.swift */; };
 		239818EF24C1D085005130E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239818EE24C1D085005130E3 /* AppDelegate.swift */; };
 		239818F124C1D085005130E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239818F024C1D085005130E3 /* SceneDelegate.swift */; };
 		239818F824C1D085005130E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239818F724C1D085005130E3 /* Assets.xcassets */; };
@@ -118,6 +120,8 @@
 		238C67D624E1BA5000E02952 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		238C67D824E1BC3700E02952 /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		238C67DB24E3152800E02952 /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		238C67DD24E7017700E02952 /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewController.swift; sourceTree = "<group>"; };
+		238C67DF24E7068700E02952 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		239818EB24C1D085005130E3 /* ShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239818EE24C1D085005130E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239818F024C1D085005130E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 				23A01D6124DDD9D3008779AF /* SignUpViewController.swift */,
 				2373215E24DE962E009FF758 /* UserLKViewController.swift */,
 				238C67D824E1BC3700E02952 /* CatalogTableViewController.swift */,
+				238C67DD24E7017700E02952 /* ReviewsTableViewController.swift */,
+				238C67DF24E7068700E02952 /* ProductViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -782,6 +788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23B8F92D24D444AD004D5840 /* AddReviewResult.swift in Sources */,
+				238C67DE24E7017700E02952 /* ReviewsTableViewController.swift in Sources */,
 				23B8F92624D43B07004D5840 /* ReviewsListResult.swift in Sources */,
 				237F0D9D24D89104001DDC91 /* DeleteFromBasketRequestFactory.swift in Sources */,
 				23B8F93624D45B56004D5840 /* RemoveReviewRequestFactory.swift in Sources */,
@@ -804,6 +811,7 @@
 				23BD270F24C6F43E00671411 /* ProfileChange.swift in Sources */,
 				23BD26F324C5A75400671411 /* RequestRouter.swift in Sources */,
 				23BD26F724C5AA3200671411 /* User.swift in Sources */,
+				238C67E024E7068700E02952 /* ProductViewController.swift in Sources */,
 				236BA61F24CB036F00E8C91B /* ProductDataResult.swift in Sources */,
 				23BD271124C6F47800671411 /* ProfileChangeResult.swift in Sources */,
 				23BD26FC24C5AB1C00671411 /* Auth.swift in Sources */,
