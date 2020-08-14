@@ -8,9 +8,10 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, ActivityIndicatorPresenter {
     
     let requestFactory = RequestFactory()
+    var activityIndicator = UIActivityIndicatorView()
 
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
@@ -27,6 +28,8 @@ class LoginViewController: UIViewController {
             return
         }
         
+        showActivityIndicator()
+        
         let auth = requestFactory.makeAuthRequestFatory()
         auth.login(userName: login, password: password) { response in
             switch response.result {
@@ -35,18 +38,17 @@ class LoginViewController: UIViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            self.hideActivityIndicator()
         }
     }
     
     @IBAction func signupButton(_ sender: Any) {
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBAction func getCatalogPressed(_ sender: Any) {
     }
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

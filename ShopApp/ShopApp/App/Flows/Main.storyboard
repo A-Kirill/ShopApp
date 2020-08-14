@@ -73,6 +73,16 @@
                                             <segue destination="ydK-Qm-WBy" kind="show" id="3IZ-ft-Yrc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrv-CR-Bf4">
+                                        <rect key="frame" x="131" y="424" width="112" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Catalog"/>
+                                        <connections>
+                                            <action selector="getCatalogPressed:" destination="4Ea-Re-IeC" eventType="touchUpInside" id="DnI-a5-k8E"/>
+                                            <segue destination="vrL-Rf-HCZ" kind="show" id="sOo-zV-Kh5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Cpi-Ra-iWb"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="b8a-zi-sta"/>
@@ -229,6 +239,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Frl-Md-XBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1777" y="565"/>
+        </scene>
+        <!--Catalog Table View Controller-->
+        <scene sceneID="rJA-Rc-liB">
+            <objects>
+                <tableViewController id="vrL-Rf-HCZ" customClass="CatalogTableViewController" customModule="ShopApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="23G-pq-kAX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="vrL-Rf-HCZ" id="I4P-Ak-DAX"/>
+                            <outlet property="delegate" destination="vrL-Rf-HCZ" id="HWZ-nt-Amb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hup-YJ-9dX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDI-6o-7fY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2835" y="87"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="CB1-KY-OHR">
