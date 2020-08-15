@@ -33,6 +33,7 @@ class ProductViewController: UIViewController {
         reviewsButton.layer.cornerRadius = 30
     }
 
+    // MARK: - Private functions
     
     private func tryRequestProductData() {
         let productData = requestFactory.makeProductDataRequestFatory()

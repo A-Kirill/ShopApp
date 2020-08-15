@@ -62,6 +62,8 @@ class CatalogTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Private functions
+    
     private func updateCatalogData(){
         catalogRequest.getCatalogData(pageNumber: 1, idCategory: 1) { response in
             switch response.result {
