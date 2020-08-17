@@ -35,6 +35,9 @@ class LoginViewController: UIViewController, ActivityIndicatorPresenter {
             switch response.result {
             case .success(let login):
                 print(login)
+                DispatchQueue.main.async {
+                    self.openMainView()
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -45,10 +48,13 @@ class LoginViewController: UIViewController, ActivityIndicatorPresenter {
     @IBAction func signupButton(_ sender: Any) {
     }
     
-    @IBAction func getCatalogPressed(_ sender: Any) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    private func openMainView() {
+        if let mainController = storyboard?.instantiateViewController(identifier: "MainVC") as? MainViewController {
+            navigationController?.pushViewController(mainController, animated: true)
+        }
     }
 }

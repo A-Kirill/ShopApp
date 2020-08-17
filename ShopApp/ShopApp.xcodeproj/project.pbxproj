@@ -33,6 +33,7 @@
 		238C67DE24E7017700E02952 /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67DD24E7017700E02952 /* ReviewsTableViewController.swift */; };
 		238C67E024E7068700E02952 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67DF24E7068700E02952 /* ProductViewController.swift */; };
 		238C67E224E7C9F900E02952 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67E124E7C9F900E02952 /* AddReviewViewController.swift */; };
+		238C67E524EAF0AE00E02952 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67E424EAF0AE00E02952 /* MainViewController.swift */; };
 		239818EF24C1D085005130E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239818EE24C1D085005130E3 /* AppDelegate.swift */; };
 		239818F124C1D085005130E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239818F024C1D085005130E3 /* SceneDelegate.swift */; };
 		239818F824C1D085005130E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239818F724C1D085005130E3 /* Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		238C67DD24E7017700E02952 /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewController.swift; sourceTree = "<group>"; };
 		238C67DF24E7068700E02952 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		238C67E124E7C9F900E02952 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		238C67E424EAF0AE00E02952 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		239818EB24C1D085005130E3 /* ShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239818EE24C1D085005130E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239818F024C1D085005130E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				2373215E24DE962E009FF758 /* UserLKViewController.swift */,
 				238C67D824E1BC3700E02952 /* CatalogTableViewController.swift */,
 				238C67DF24E7068700E02952 /* ProductViewController.swift */,
+				238C67E424EAF0AE00E02952 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				23B8F93624D45B56004D5840 /* RemoveReviewRequestFactory.swift in Sources */,
 				23BD26FE24C5AB9600671411 /* RequestFactory.swift in Sources */,
 				236BA61624CAE4A400E8C91B /* CatalogData.swift in Sources */,
+				238C67E524EAF0AE00E02952 /* MainViewController.swift in Sources */,
 				23BD26ED24C59CD700671411 /* AbstractErrorParser.swift in Sources */,
 				23BD271324C6F48F00671411 /* ProfileChangeRequestFactory.swift in Sources */,
 				23B8F92B24D4449B004D5840 /* AddReview.swift in Sources */,

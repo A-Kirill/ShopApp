@@ -13,12 +13,15 @@ class AddReviewViewController: UIViewController {
     let requestFactory = RequestFactory()
     
     @IBOutlet weak var reviewText: UITextView!
+    @IBOutlet weak var postButton: UIButton!
     @IBAction func postPressed(_ sender: Any) {
         tryAddReview()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        postButton.layer.cornerRadius = 30
     }
     
     private func tryAddReview() {
