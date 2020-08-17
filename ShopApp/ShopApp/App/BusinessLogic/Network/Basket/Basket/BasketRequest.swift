@@ -28,7 +28,7 @@ class BasketRequest: AbstractRequestFactory {
 
 // MARK: - реализация метода получения карзины
 extension BasketRequest: BasketRequestFactory {
-    func getBasket(idUser: Int, completionHandler: @escaping (AFDataResponse<BasketRequestResult>) -> Void) {
+    func getBasket(idUser: Int, completionHandler: @escaping (AFDataResponse<[InBasket]>) -> Void) {
         let requestModel = BasketRequest(baseUrl: baseUrl, idUser: idUser)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

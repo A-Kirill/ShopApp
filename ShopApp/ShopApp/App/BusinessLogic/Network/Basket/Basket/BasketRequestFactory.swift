@@ -11,5 +11,5 @@ import Alamofire
 
 protocol BasketRequestFactory {
     func getBasket(idUser: Int,
-                   completionHandler: @escaping (AFDataResponse<BasketRequestResult>) -> Void)
+                   completionHandler: @escaping (AFDataResponse<[InBasket]>) -> Void)
 }

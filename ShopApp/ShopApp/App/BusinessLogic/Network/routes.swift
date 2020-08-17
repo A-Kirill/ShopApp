@@ -67,5 +67,10 @@ func routes(_ app: Application) throws {
  app.get("payment") { req -> String in
      return "{ \"result\": 1, \"userMessage\": \"Ваш заказ оплачен\" }"
  }
+ 
+ //getBasket
+ app.get("getBasket") { req -> String in
+     return "[{\"id_product\": 123, \"product_name\": \"Ноутбук\", \"price\": 45600, \"quantity\": 1 }, {\"id_product\": 456, \"product_name\": \"Мышка\", \"price\": 1000, \"quantity\": 1}]"
+ }
 }
 */
