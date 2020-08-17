@@ -19,5 +19,5 @@ struct ProductDataResult: Codable {
         case name = "product_name"
         case price = "product_price"
         case description = "product_description"
-    }    
+    }
 }
