@@ -13,6 +13,7 @@ class BasketTableViewController: UITableViewController {
     private var basketRequest: BasketRequestFactory!
     private var deleteRequest: DeleteFromBasketRequestFactory!
     private var products: [InBasket] = []
+    let requestFactory = RequestFactory()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,8 @@ class BasketTableViewController: UITableViewController {
         basketRequest = RequestFactory().makeBasketRequestFactory()
         deleteRequest = RequestFactory().makeDeleteFromBasketRequestFatory()
         
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let payButton = UIBarButtonItem(image: UIImage(named: "pay"), style: .plain, target: self, action: #selector(showActionSheet))
+        self.navigationItem.rightBarButtonItem = payButton
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,5 +96,47 @@ class BasketTableViewController: UITableViewController {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    private func payButtonTapped() {
+        let payment = requestFactory.makePaymentOrderRequestFatory()
+        payment.paymentOrder(idProduct: 123, creditCard: "4444-4444-4444-4444") { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+                DispatchQueue.main.async {
+                    self.showDoneAllert()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    //Action Sheet
+    @objc private func showActionSheet(controller: UIViewController) {
+        let alert = UIAlertController(title: "Payment", message: "Would you like to pay for items in your card?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Approve", style: .default, handler: { (_) in
+            print("User click Approve button")
+            self.payButtonTapped()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Edit payment method", style: .default, handler: { (_) in
+            print("User click Edit button")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { (_) in
+            print("User click Dismiss button")
+        }))
+        
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+    }
+    
+    private func showDoneAllert() {
+        let alert = UIAlertController(title: "Done", message: "Your order has been paid", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
