@@ -31,7 +31,72 @@ class ShopAppUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
+    
+    func testSuccessRegistration() throws {
+        
+        let app = XCUIApplication()
+        app.launch()
+        
+        app/*@START_MENU_TOKEN@*/.buttons["SIGNUP"]/*[[".scrollViews.buttons[\"SIGNUP\"]",".buttons[\"SIGNUP\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["SIGNUP"].tap()
+        
+        let elementsQuery = app.scrollViews.otherElements
+        
+        let nameTextField = elementsQuery.textFields["Name"]
+        nameTextField.tap()
+        nameTextField.typeText("Name")
+        
+        let passwordTextField = elementsQuery.secureTextFields["Password"]
+        passwordTextField.tap()
+        passwordTextField.typeText("Qwerty")
+        
+        let repeatPasswordTextField = elementsQuery.secureTextFields["Repeat password"]
+        repeatPasswordTextField.tap()
+        repeatPasswordTextField.typeText("Qwerty")
+        
+        let emailTextField = elementsQuery.textFields["Email"]
+        emailTextField.tap()
+        emailTextField.typeText("examp@mail.ru")
+        
+        let genderTextField = elementsQuery.textFields["Gender"]
+        genderTextField.tap()
+        genderTextField.typeText("m")
+        
+        let creditCardTextField = elementsQuery.textFields["Credit card"]
+        creditCardTextField.tap()
+        creditCardTextField.typeText("4444-4444-4444-4444")
+        
+        elementsQuery.staticTexts["Credit card"].swipeUp()
+        
+        let someInformationAboutYouTextField = elementsQuery.textFields["Some information about you"]
+        someInformationAboutYouTextField.tap()
+        
+        
+        elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["REGISTER"]/*[[".buttons[\"REGISTER\"].staticTexts[\"REGISTER\"]",".staticTexts[\"REGISTER\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
+    
+    func testUnsuccessRegistration() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app/*@START_MENU_TOKEN@*/.buttons["SIGNUP"]/*[[".scrollViews.buttons[\"SIGNUP\"]",".buttons[\"SIGNUP\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["SIGNUP"].tap()
+        
+        let elementsQuery = app.scrollViews.otherElements
+        
+        let nameTextField = elementsQuery.textFields["Name"]
+        nameTextField.tap()
+        nameTextField.typeText("Name")
+        
+        let passwordTextField = elementsQuery.secureTextFields["Password"]
+        passwordTextField.tap()
+        passwordTextField.typeText("Qwerty")
+        
+        let repeatPasswordTextField = elementsQuery.secureTextFields["Repeat password"]
+        repeatPasswordTextField.tap()
+        repeatPasswordTextField.typeText("Not Qwerty")
+        
+        elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["REGISTER"]/*[[".buttons[\"REGISTER\"].staticTexts[\"REGISTER\"]",".staticTexts[\"REGISTER\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.

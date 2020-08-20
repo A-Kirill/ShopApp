@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        tryDeleteFromBasket()
 //        sleep(2)
 //        tryPayment()
+//        tryGetBasket()
         
         
         return true
@@ -181,6 +182,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func tryPayment(){
         let payment = requestFactory.makePaymentOrderRequestFatory()
         payment.paymentOrder(idProduct: 123, creditCard: "4444-4444-4444-4444") { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func tryGetBasket() {
+        let basket = requestFactory.makeBasketRequestFactory()
+        basket.getBasket(idUser: 222) { response in
             switch response.result {
             case .success(let userMessage):
                 print(userMessage)

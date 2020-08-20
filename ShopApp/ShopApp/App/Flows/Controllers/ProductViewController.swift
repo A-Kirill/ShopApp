@@ -20,6 +20,7 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var reviewsButton: UIButton!
     
     @IBAction func addBasketPressed(_ sender: Any) {
+        tryAddToBasket()
     }
     @IBAction func reviewsPressed(_ sender: Any) {
     }
@@ -48,5 +49,26 @@ class ProductViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    private func tryAddToBasket() {
+        let adding = requestFactory.makeAddToBasketRequestFatory()
+        adding.addToBasket(idProduct: productId, quantity: 1) { response in
+            switch response.result {
+            case .success(let userMessage):
+                print(userMessage)
+                DispatchQueue.main.async {
+                    self.showDoneAllert()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func showDoneAllert() {
+        let alert = UIAlertController(title: "Done", message: "Added to cart", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
