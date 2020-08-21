@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 class LoginViewController: UIViewController, ActivityIndicatorPresenter {
     
@@ -46,6 +48,8 @@ class LoginViewController: UIViewController, ActivityIndicatorPresenter {
     }
     
     @IBAction func signupButton(_ sender: Any) {
+        Analytics.logEvent("Tap_signUp", parameters: ["Function": "\(#function)"])
+//        fatalError()//for init crashlytics
     }
     
     override func viewDidLoad() {
