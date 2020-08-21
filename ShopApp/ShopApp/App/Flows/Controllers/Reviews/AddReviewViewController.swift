@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class AddReviewViewController: UIViewController {
     
@@ -25,6 +26,9 @@ class AddReviewViewController: UIViewController {
     }
     
     private func tryAddReview() {
+        
+        Analytics.logEvent("Add_review", parameters: nil)
+        
         let review = requestFactory.makeAddReviewRequestFatory()
         review.addReview(idUser: 222, idProduct: 123, text: reviewText.text!) { response in
             switch response.result {

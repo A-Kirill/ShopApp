@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class ProductViewController: UIViewController {
     
@@ -37,6 +38,9 @@ class ProductViewController: UIViewController {
     // MARK: - Private functions
     
     private func tryRequestProductData() {
+        
+        Analytics.logEvent("Get_product_info", parameters: nil)
+        
         let productData = requestFactory.makeProductDataRequestFatory()
         productData.getProductData(id: productId) { response in
             switch response.result {
@@ -52,6 +56,9 @@ class ProductViewController: UIViewController {
     }
     
     private func tryAddToBasket() {
+        
+        Analytics.logEvent("Add_to_basket", parameters: nil)
+        
         let adding = requestFactory.makeAddToBasketRequestFatory()
         adding.addToBasket(idProduct: productId, quantity: 1) { response in
             switch response.result {
