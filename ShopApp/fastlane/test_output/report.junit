@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='ShopAppUITests.xctest' tests='21' failures='0'>
+  <testsuite name='ShopAppTests.AuthTest' tests='3' failures='0'>
+    <testcase classname='ShopAppTests.AuthTest' name='testAuthorization' time='0.017'/>
+    <testcase classname='ShopAppTests.AuthTest' name='testExample' time='0.001'/>
+    <testcase classname='ShopAppTests.AuthTest' name='testPerformanceExample' time='0.358'/>
+  </testsuite>
+  <testsuite name='ShopAppTests.CatalogDataTest' tests='3' failures='0'>
+    <testcase classname='ShopAppTests.CatalogDataTest' name='testExample' time='0.000'/>
+    <testcase classname='ShopAppTests.CatalogDataTest' name='testGetCatalogData' time='0.006'/>
+    <testcase classname='ShopAppTests.CatalogDataTest' name='testPerformanceExample' time='0.253'/>
+  </testsuite>
+  <testsuite name='ShopAppTests.LogoutTest' tests='3' failures='0'>
+    <testcase classname='ShopAppTests.LogoutTest' name='testExample' time='0.001'/>
+    <testcase classname='ShopAppTests.LogoutTest' name='testLogout' time='0.008'/>
+    <testcase classname='ShopAppTests.LogoutTest' name='testPerformanceExample' time='0.253'/>
+  </testsuite>
+  <testsuite name='ShopAppTests.ProductDataTest' tests='3' failures='0'>
+    <testcase classname='ShopAppTests.ProductDataTest' name='testExample' time='0.001'/>
+    <testcase classname='ShopAppTests.ProductDataTest' name='testGetProductData' time='0.008'/>
+    <testcase classname='ShopAppTests.ProductDataTest' name='testPerformanceExample' time='0.252'/>
+  </testsuite>
+  <testsuite name='ShopAppTests.ProfileChangeTest' tests='3' failures='0'>
+    <testcase classname='ShopAppTests.ProfileChangeTest' name='testExample' time='0.001'/>
+    <testcase classname='ShopAppTests.ProfileChangeTest' name='testPerformanceExample' time='0.253'/>
+    <testcase classname='ShopAppTests.ProfileChangeTest' name='testProfileChange' time='0.006'/>
+  </testsuite>
+  <testsuite name='ShopAppTests.ShopAppTests' tests='2' failures='0'>
+    <testcase classname='ShopAppTests.ShopAppTests' name='testExample' time='0.001'/>
+    <testcase classname='ShopAppTests.ShopAppTests' name='testPerformanceExample' time='0.253'/>
+  </testsuite>
+  <testsuite name='ShopAppUITests.ShopAppUITests' tests='4' failures='0'>
+    <testcase classname='ShopAppUITests.ShopAppUITests' name='testExample' time='1.564'/>
+    <testcase classname='ShopAppUITests.ShopAppUITests' name='testLaunchPerformance' time='15.104'/>
+    <testcase classname='ShopAppUITests.ShopAppUITests' name='testSuccessRegistration' time='9.819'/>
+    <testcase classname='ShopAppUITests.ShopAppUITests' name='testUnsuccessRegistration' time='6.488'/>
+  </testsuite>
+</testsuites>
