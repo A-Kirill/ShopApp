@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class ReviewsTableViewController: UITableViewController {
     
@@ -39,6 +40,9 @@ class ReviewsTableViewController: UITableViewController {
     // MARK: - Private functions
 
     private func tryGetReviews(){
+        
+        Analytics.logEvent("Get_reviews", parameters: nil)
+        
         let reviews = requestFactory.makeReviewsListRequestFatory()
         reviews.getReviewsList(idProduct: productId) { response in
             switch response.result {

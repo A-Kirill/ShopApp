@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 class LoginViewController: UIViewController, ActivityIndicatorPresenter {
     
@@ -18,6 +20,9 @@ class LoginViewController: UIViewController, ActivityIndicatorPresenter {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func loginButton(_ sender: Any) {
+        
+        Analytics.logEvent("Login_tapped", parameters: ["Function": "\(#function)"])
+        
         let login = loginInput.text!
         let password = passwordInput.text!
         
@@ -46,6 +51,7 @@ class LoginViewController: UIViewController, ActivityIndicatorPresenter {
     }
     
     @IBAction func signupButton(_ sender: Any) {
+//        fatalError()//for init crashlytics
     }
     
     override func viewDidLoad() {

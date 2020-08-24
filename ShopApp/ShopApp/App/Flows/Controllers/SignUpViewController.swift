@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class SignUpViewController: UIViewController {
     
@@ -22,6 +23,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func registerPressed(_ sender: Any) {
+        
+        Analytics.logEvent("Register_tapped", parameters: ["Function": "\(#function)"])
+        
         let name = nameInput.text!
         let password = passInput.text!
         let repeatPass = repeatPassInput.text!

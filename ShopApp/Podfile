@@ -9,6 +9,8 @@ target 'ShopApp' do
 
 pod 'Swinject'
 pod 'Alamofire'
+pod 'Firebase/Analytics'
+pod 'Firebase/Crashlytics'
 
   target 'ShopAppTests' do
     inherit! :search_paths

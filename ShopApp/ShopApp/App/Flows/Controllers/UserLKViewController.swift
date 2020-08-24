@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class UserLKViewController: UIViewController {
     
@@ -22,6 +23,9 @@ class UserLKViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func registerPressed(_ sender: Any) {
+        
+        Analytics.logEvent("Save_tapped", parameters: ["Request": "profileChange"])
+        
         let name = nameInput.text!
         let password = passInput.text!
         let repeatPass = repeatPassInput.text!

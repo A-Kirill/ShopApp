@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class BasketTableViewController: UITableViewController {
     
@@ -73,6 +74,9 @@ class BasketTableViewController: UITableViewController {
     // MARK: - Private functions
     
     private func tryGetBasket() {
+        
+        Analytics.logEvent("Get_basket", parameters: nil)
+        
         basketRequest.getBasket(idUser: 222) { response in
             switch response.result {
             case .success(let value):
@@ -88,6 +92,9 @@ class BasketTableViewController: UITableViewController {
     }
     
     private func tryDeleteFromBasket(id: Int) {
+        
+        Analytics.logEvent("Delete_from_basket", parameters: nil)
+        
         deleteRequest.deleteFromBasket(idProduct: id) { response in
             switch response.result {
             case .success(let userMessage):
@@ -99,6 +106,9 @@ class BasketTableViewController: UITableViewController {
     }
     
     private func payButtonTapped() {
+        
+        Analytics.logEvent("Pay_tapped", parameters: nil)
+        
         let payment = requestFactory.makePaymentOrderRequestFatory()
         payment.paymentOrder(idProduct: 123, creditCard: "4444-4444-4444-4444") { response in
             switch response.result {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class CatalogTableViewController: UITableViewController {
     
@@ -65,6 +66,9 @@ class CatalogTableViewController: UITableViewController {
     // MARK: - Private functions
     
     private func updateCatalogData(){
+        
+        Analytics.logEvent("Get_catalog_data", parameters: nil)
+        
         catalogRequest.getCatalogData(pageNumber: 1, idCategory: 1) { response in
             switch response.result {
             case .success(let value):

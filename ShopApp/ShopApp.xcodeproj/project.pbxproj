@@ -38,6 +38,7 @@
 		238C67EA24EB01C200E02952 /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67E924EB01C200E02952 /* BasketRequestFactory.swift */; };
 		238C67EC24EB01D400E02952 /* BasketRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67EB24EB01D400E02952 /* BasketRequestResult.swift */; };
 		238C67EE24EB0A7700E02952 /* BasketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C67ED24EB0A7700E02952 /* BasketTableViewController.swift */; };
+		238C67F024EEF33600E02952 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 238C67EF24EEF33600E02952 /* GoogleService-Info.plist */; };
 		239818EF24C1D085005130E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239818EE24C1D085005130E3 /* AppDelegate.swift */; };
 		239818F124C1D085005130E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239818F024C1D085005130E3 /* SceneDelegate.swift */; };
 		239818F824C1D085005130E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239818F724C1D085005130E3 /* Assets.xcassets */; };
@@ -134,6 +135,7 @@
 		238C67E924EB01C200E02952 /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
 		238C67EB24EB01D400E02952 /* BasketRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestResult.swift; sourceTree = "<group>"; };
 		238C67ED24EB0A7700E02952 /* BasketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewController.swift; sourceTree = "<group>"; };
+		238C67EF24EEF33600E02952 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		239818EB24C1D085005130E3 /* ShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239818EE24C1D085005130E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239818F024C1D085005130E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				2398191F24C1D472005130E3 /* Core */,
 				2398192024C1D486005130E3 /* Resource */,
 				2398192124C1D496005130E3 /* Environments */,
+				238C67EF24EEF33600E02952 /* GoogleService-Info.plist */,
 			);
 			path = ShopApp;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				239818E824C1D085005130E3 /* Frameworks */,
 				239818E924C1D085005130E3 /* Resources */,
 				EDB92B4C4042F89BC8C62C80 /* [CP] Embed Pods Frameworks */,
+				238C67F124EEF82600E02952 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -692,6 +696,7 @@
 			files = (
 				23A01D5E24DDD074008779AF /* Main.storyboard in Resources */,
 				238C67D524E1B71500E02952 /* ProductCell.xib in Resources */,
+				238C67F024EEF33600E02952 /* GoogleService-Info.plist in Resources */,
 				239818FB24C1D085005130E3 /* LaunchScreen.storyboard in Resources */,
 				239818F824C1D085005130E3 /* Assets.xcassets in Resources */,
 			);
@@ -735,6 +740,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		238C67F124EEF82600E02952 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		B2FF5C1014E2B2B401D4DC8D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1052,6 +1074,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2Q8CDQHFHQ;
 				INFOPLIST_FILE = ShopApp/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
