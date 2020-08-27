@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230BF99324F7A12000C99948 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230BF99224F7A12000C99948 /* GradientView.swift */; };
 		23105D4F24D0A7CB00674391 /* routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23105D4E24D0A7CB00674391 /* routes.swift */; };
 		236BA61624CAE4A400E8C91B /* CatalogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61524CAE4A400E8C91B /* CatalogData.swift */; };
 		236BA61824CAE51A00E8C91B /* CatalogDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA61724CAE51A00E8C91B /* CatalogDataRequestFactory.swift */; };
@@ -104,6 +105,7 @@
 /* Begin PBXFileReference section */
 		03F135D30D82EE2218CCF031 /* Pods_ShopAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		050EA76BA33DB0EFBFEFE40A /* Pods-ShopAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShopAppTests/Pods-ShopAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		230BF99224F7A12000C99948 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		23105D4E24D0A7CB00674391 /* routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routes.swift; sourceTree = "<group>"; };
 		236BA61524CAE4A400E8C91B /* CatalogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogData.swift; sourceTree = "<group>"; };
 		236BA61724CAE51A00E8C91B /* CatalogDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataRequestFactory.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				238C67DA24E3087D00E02952 /* Cells */,
 				2373216024DEAD93009FF758 /* Controllers */,
 				238C67DB24E3152800E02952 /* ActivityIndicatorPresenter.swift */,
+				230BF99224F7A12000C99948 /* GradientView.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -854,6 +857,7 @@
 				23BD26ED24C59CD700671411 /* AbstractErrorParser.swift in Sources */,
 				23BD271324C6F48F00671411 /* ProfileChangeRequestFactory.swift in Sources */,
 				23B8F92B24D4449B004D5840 /* AddReview.swift in Sources */,
+				230BF99324F7A12000C99948 /* GradientView.swift in Sources */,
 				238C67EE24EB0A7700E02952 /* BasketTableViewController.swift in Sources */,
 				238C67E824EB016B00E02952 /* BasketRequest.swift in Sources */,
 				23BD270824C6DF5400671411 /* LogoutResult.swift in Sources */,
